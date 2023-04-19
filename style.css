@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+
+:root {
+    /* Primary */
+
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    font-size: 12px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+}
+
+section.top > div.left > header {
+    position: absolute;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    padding: 45px 25px;
+}
+
+section.top > div.left > header > button.btn-menu {
+    position: absolute;
+    left: 25px;
+    z-index: 1;
+    border: none;
+    background-color: transparent;
+}
+
+section.top > div.left > header > button.btn-menu:hover {
+    cursor: pointer;
+}
+ 
+section.top > div.left > header > div.logo {
+    margin-right: 15px;
+}
+
+section.top > div.left > header > nav.navbar {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--White);
+}
+
+section.top > div.left > header > nav.navbar.active {
+   display: block; 
+}
+
+section.top > div.left > header ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin-inline-start: 120px;
+    margin-block-start: 42.5px;
+}
+
+section.top > div.left > header ul a {
+    color: var(--Black);
+    font-weight: 700;
+    font-size: .8rem;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+
+section.top div.tela {
+    display: none;
+    position: absolute;
+    opacity: .6;
+    background-color: var(--Black);
+    width: 100%;
+    height: 100vh
+}
+
+section.top div.tela.active {
+    display: block;
+}
+
+section.top > div.left picture > img {
+    width: 100%;
+    height: 100%;
+}
+
+section.top > div.rigth {
+    position: relative;
+}
+
+section.top > div.rigth article.slide {
+    display: none;
+    padding: 40px 30px;
+    width: 100%;
+    height: 100%;
+}
+
+section.top > div.rigth article.slide > h1 {
+    color: var(--Black);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+section.top > div.rigth article.slide > p {
+    color: var(--Dark-Gray);
+    font-weight: 500;
+    font-size: 1rem;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+section.top > div.rigth article.slide > a {
+    color: var(--Very-Dark-Gray);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .6rem;
+}
+
+section.top > div.rigth article.slide > a > svg {
+    margin-inline-start: 20px;
+}
+
+section.top > div.rigth > div.buttons {
+    position: absolute;
+    top: -64px;
+    right: 0;
+
+    display: flex;
+}
+
+section.top > div.rigth > div.buttons > img {
+    background-color: var(--Black);
+    padding: 18px 20px;
+}
+
+section.bottom > div.left > img,
+section.bottom > div.rigth > img {
+    width: 100%;
+    height: 100%;
+}
+
+section.bottom > div.center {
+    background-color: var(--White);
+    padding: 40px 30px;
+}
+
+section.bottom > div.center > h2 {
+    color: var(--Black);
+    font-weight: 600;
+    font-size: 1rem; 
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+section.bottom > div.center > p {
+    color: var(--Dark-Gray);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        grid-template-rows: 2fr 1fr;
+    }
+    section.top {
+        display: grid;
+        grid-template-columns: 2fr 1.4fr;
+    }
+    section.top > div.left > header {
+        position: absolute;
+        align-items: baseline;
+        justify-content: flex-start;
+    }
+    section.top > div.left > header > div.logo {
+        margin-right: 15px;
+    }    
+    section.top > div.left > header > nav.navbar {
+        display: block;
+        position: relative;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+    }
+    section.top > div.left > header ul {
+        display: flex;
+        gap: 25px;
+        list-style: none;
+        margin-inline-start: 30px;
+        margin-block-start: auto;
+    }    
+    section.top > div.left > header ul a {
+        position: relative;
+        color: var(--White);
+        font-weight: 700;
+        font-size: .8rem;
+        text-transform: lowercase;
+        text-decoration: none;
+    }
+    section.top > div.left > header ul a:hover::after {
+        position: absolute;
+        bottom: -5px;
+        display: block;
+        content: "";
+        width: 1.825rem;
+        height: 10px;
+        border-bottom: 1px solid var(--White);
+    }
+    section.top > div.left > header > button.btn-menu {
+        display: none;
+    }
+    section.top > div.rigth > section.slider {
+        padding-top: 70px;
+        padding-left: 30px;
+    }
+    section.top > div.rigth article.slide {
+        display: none;
+        padding: 40px;
+        width: 100%;
+        height: 100%;
+    }    
+    section.top > div.rigth article.slide > h1 {
+        font-size: 2.2rem;
+    }    
+    section.top > div.rigth article.slide > p {
+        line-height: 1.2rem;
+        font-weight: 600;
+        font-size: .7rem;
+    }    
+    section.top > div.rigth article.slide > a {
+        font-size: .8rem;
+        letter-spacing: .5rem;
+    }    
+    section.top > div.rigth article.slide > a,
+    section.top > div.rigth article.slide > a > svg path {        
+        transition: all .5s ease-out;
+    }
+    section.top > div.rigth article.slide > a:hover {
+        color: var(--Dark-Gray);
+    }    
+    section.top > div.rigth article.slide > a:hover > svg path {
+        fill: var(--Dark-Gray);
+    }
+    section.top > div.rigth > div.buttons {
+        top: auto;
+        right: auto;
+        bottom: 0;    
+    }
+    section.top > div.rigth > div.buttons > img {
+        background-color: var(--Black);
+        padding: 20px 25px;
+        transition: background-color .8s ease-out;
+    }
+    section.top > div.rigth > div.buttons > img:hover {
+        cursor: pointer;
+        background-color: var(--Very-Dark-Gray);
+    }
+    section.bottom {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 1.5fr;
+    }
+    section.bottom > div.center {
+        background-color: var(--White);
+        padding: 50px 35px;
+    }
+    section.bottom > div.center > h2 {
+        font-size: .8rem; 
+    }    
+    section.bottom > div.center > p {
+        font-weight: 600;
+        font-size: .7rem;
+        line-height: 1.2rem;
+    }
+}

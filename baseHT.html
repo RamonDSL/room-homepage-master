@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Teste</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+            min-height: 100vh;
+            width: 100%;
+            background-color: aquamarine;
+        }
+
+        /* .top {
+            display: flex;
+            position: relative;
+            background-color: red;
+        }
+        .top > .Tleft {
+            width: 60%;
+            background-color: blue;            
+        }
+        .top > .Tright {
+            width: 40%;
+            background-color: yellow;
+        }
+
+        .bottom {
+            display: flex;
+            background-color: green;
+        }
+        .bottom > .Bleft {
+            width: 30%;
+            background-color: burlywood;
+        }
+        .bottom > .Bcenter {
+            width: 40%;
+            background-color: whitesmoke;
+        }
+        .bottom > .Brigth {
+            width: 30%;
+            background-color: rebeccapurple;
+        } */
+        .top {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr;
+            background-color: red;
+        }
+        .top > .Tleft {
+            background-color: blue;            
+        }
+        .top > .Tright {
+            background-color: yellow;
+        }
+
+        .bottom {
+            display: grid;
+            grid-template-columns: 1.3fr 2fr 1.3fr;
+            background-color: green;
+        }
+        .bottom > .Bleft {
+            background-color: burlywood;
+        }
+        .bottom > .Bcenter {
+            background-color: whitesmoke;
+        }
+        .bottom > .Brigth {
+            background-color: rebeccapurple;
+        }
+        /*a {
+            margin-left: 50px;
+            position: relative;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+        a:hover::after {
+            position: absolute;
+            bottom: -5px;
+            left: 10px;
+            content: "";
+            width: 2.50rem;
+            height: 10px;
+            border-bottom: 1px solid aqua;
+        }*/
+    </style>
+</head>
+<body>
+    <main>
+        <div class="top">
+            <div class="Tleft"> Parte 1</div>
+            <div class="Tright">Parte 2</div>
+        </div>
+        <div class="bottom">
+            <div class="Bleft">Parte 3</div>
+            <div class="Bcenter">Parte 4</div>
+            <div class="Brigth">Parte 5</div>
+        </div>
+    </main><!-- 
+    <a href="#">teste</a> -->
+    <script src="./teste.js"></script>
+</body>
+</html>
